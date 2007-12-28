@@ -43,7 +43,7 @@ public class TSPSolver
         l.add(new OptimizerDescriptor(
         		"TSOptimizer",
 				new OptimizerArg[] {
-        				new OptimizerArg("DataFile","Data File","TSP-TW.txt"),						
+        				new OptimizerArg("DataFile","Data File","data/TSP-TW.txt"),						
         				new OptimizerArg("Replications","Replications","1"),						
         				new OptimizerArg("MoveTabuTenure","Keep performed moves in tabu list for this number of iterations","5"),						
         				new OptimizerArg("SolutionTabuTenure","Keep visited solutions in tabu list for this number of iterations","50"),						
@@ -58,7 +58,7 @@ public class TSPSolver
         l.add(new OptimizerDescriptor(
         		"GAOptimizer",
 				new OptimizerArg[] {
-        				new OptimizerArg("DataFile","Data File","hwk2-TSP-data.txt"),						
+        				new OptimizerArg("DataFile","Data File","data/hwk2-TSP-data.txt"),						
         				new OptimizerArg("Replications","Replications","1"),						
         				new OptimizerArg("PopSize","Population Size","20"),						
         				new OptimizerArg("MutationRate","Mutation Rate","0.01"),						
@@ -70,7 +70,7 @@ public class TSPSolver
         l.add(new OptimizerDescriptor(
         		"SA2TSPOptimizer",
 				new OptimizerArg[] {
-        				new OptimizerArg("DataFile","Data File","hwk2-TSP-data.txt"),						
+        				new OptimizerArg("DataFile","Data File","data/hwk2-TSP-data.txt"),						
         				new OptimizerArg("Replications","Replications","1"),						
         				new OptimizerArg("InitTemp","Initial Temperature","1000"),						
         				new OptimizerArg("TempChgRate","TemperatureChange Rate","0.9"),						
@@ -83,7 +83,7 @@ public class TSPSolver
         l.add(new OptimizerDescriptor(
         		"SAOptimizer",
 				new OptimizerArg[] {
-        				new OptimizerArg("DataFile","Data File","hwk2-TSP-data.txt"),						
+        				new OptimizerArg("DataFile","Data File","data/hwk2-TSP-data.txt"),						
         				new OptimizerArg("Replications","Replications","1"),						
         				new OptimizerArg("InitTemp","Initial Temperature","100"),						
         				new OptimizerArg("TempChgRate","TemperatureChange Rate","0.9"),						
@@ -96,7 +96,7 @@ public class TSPSolver
         l.add(new OptimizerDescriptor(
         		"GRASPOptimizer",
 				new OptimizerArg[] {
-        				new OptimizerArg("DataFile","Data File","hwk2-TSP-data.txt"),						
+        				new OptimizerArg("DataFile","Data File","data/hwk2-TSP-data.txt"),						
         				new OptimizerArg("Replications","Replications","1"),						
         				new OptimizerArg("CandidateCnt","Number Of Candidates to evaluate","1000"),						
         				new OptimizerArg("NeighborCnt","Number of closest neighbors to consider to build candidate","5"),						
@@ -253,7 +253,7 @@ public class TSPSolver
     static private void createAndShowGUI(List optDescriptors) 
     {
     	try {
-    		UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+    		//UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
     		//UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
     		JFrame.setDefaultLookAndFeelDecorated(true);
     		
