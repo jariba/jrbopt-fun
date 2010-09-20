@@ -1,7 +1,7 @@
 from math import sqrt,pow
 
 # Returns a distance based similarity score for person1 and person2
-
+# Euclidean distance score
 def sim_distance(prefs,person1,person2):
     # Get the list of shared_items
     si = {}
