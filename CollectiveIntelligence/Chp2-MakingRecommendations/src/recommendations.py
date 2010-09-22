@@ -42,7 +42,7 @@ def sim_pearson(prefs,person1,person2):
     # Calculate Pearson score
     n = len(si)
     num = pSum - (sum1*sum2/n)
-    den = sqrt((sum1Sq-pow(sum1,2)/n)*(sum2Sq-pow(sum2,2)))
+    den = sqrt((sum1Sq-pow(sum1,2)/n)*(sum2Sq-pow(sum2,2)/n))
     
     if den==0: return  0
     
@@ -59,3 +59,5 @@ critics={
          'Jack Matthews':    {'Lady in the Water':3.0, 'Snakes on a Plane':4.0,                     'Superman Returns':5.0, 'You, Me and Dupree':3.5, 'The Night Listener':3.0},
          'Toby':             {                         'Snakes on a Plane':4.5,                     'Superman Returns':4.0, 'You, Me and Dupree':1.0}
 }
+
+print sim_pearson(critics,'Lisa Rose','Gene Seymour')
