@@ -93,7 +93,19 @@ def getRecommendations(prefs,person,similarity=sim_pearson):
     rankings.sort()
     rankings.reverse()
     return rankings
-    
+
+# Transposes the preference matrix
+# in the example below it can be used to move from user-based recs to item-based recs    
+def transformPrefs(prefs):
+    result = {}
+    for person in prefs:
+        for item in prefs[person]:
+            result.setdefault(item,{})   
+            # Flip item and person
+            result[item][person]=prefs[person][item]
+        
+    return result
+ 
            
     
 # A dictionary of movie critics and their ratings on a small set of movies
@@ -106,5 +118,7 @@ critics={
          'Jack Matthews':    {'Lady in the Water':3.0, 'Snakes on a Plane':4.0,                     'Superman Returns':5.0, 'You, Me and Dupree':3.5, 'The Night Listener':3.0},
          'Toby':             {                         'Snakes on a Plane':4.5,                     'Superman Returns':4.0, 'You, Me and Dupree':1.0}
 }
+
+movies = transformPrefs(critics)
 
 #print sim_pearson(critics,'Lisa Rose','Gene Seymour')
