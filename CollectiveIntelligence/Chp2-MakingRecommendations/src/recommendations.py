@@ -154,7 +154,7 @@ def getRecommendedItems(prefs,itemMatch,user):
 
 
 # Reads data file downloaded from http://www.grouplens.org/node/12
-def loadMovieLens(path='../data/movielens-data_0'):
+def loadMovieLens(path='/Users/jbarreir/Personal/dev/CollectiveIntelligence/workspace/Chp2-MakingRecommendations/data/movielens-data_0'):
     # Get movie titles
     movies={}
     for line in open(path+'/u.item'):
