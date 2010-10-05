@@ -123,7 +123,7 @@ def calculateSimilarItems(prefs,n=10):
         
     return result           
     
- # Item-based recommendations    
+# Item-based recommendations    
 def getRecommendedItems(prefs,itemMatch,user):
     userRatings=prefs[user]
     scores={}
