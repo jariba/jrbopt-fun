@@ -1,0 +1,1 @@
+Implementation of solution to benchmark and interesting problems in Constraint Programming, Scheduling, AI Planning and combinatorial optimization in general.
